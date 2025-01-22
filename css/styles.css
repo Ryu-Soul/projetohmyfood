@@ -1,3 +1,162 @@
+/****** Variables ***********/
+/****** Body ***********/
+body {
+  margin: 0;
+  width: 375px;
+  height: 2252px;
+}
+
+/****** Header ***********/
+header {
+  max-width: 375px;
+  height: 113px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 375px;
+  height: 63px;
+}
+
+.logo img {
+  max-width: 162px;
+  max-height: 44px;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  max-width: 375px;
+  width: 375px;
+  height: 50px;
+  background: #EAEAEA;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+
+.location input {
+  width: 110px;
+  height: 19px;
+  border: none;
+  background: none;
+}
+
+.location input::placeholder {
+  width: 109px;
+  color: #353535;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18.75px;
+}
+
+/****** Recherche ***********/
+.Recherche {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 300px;
+  background: #f6f6f6;
+}
+
+.Recherche .bloc1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.Recherche h1 {
+  width: 275px;
+  height: 68px;
+  font-family: "Roboto";
+  font-weight: 700;
+  size: 24px;
+  line-height: 28.13px;
+  text-align: center;
+  margin: 0;
+}
+
+.Recherche p {
+  width: 315px;
+  height: 46px;
+  font-family: "Roboto";
+  font-weight: 300;
+  size: 18px;
+  line-height: 21.09px;
+  text-align: center;
+  margin: 0;
+}
+
+.Recherche button {
+  border-radius: 50px;
+  width: 218px;
+  height: 50px;
+  background: linear-gradient(to top, #9356DC -11.44%, #FF79DA 123.93%);
+  border: none;
+  color: #FFFFFF;
+  font-family: "Roboto";
+  font-weight: 500;
+  size: 16px;
+  line-height: 18.75px;
+  text-align: center;
+}
+
+/****** Fonctionnement ***********/
+.Fonctionnement {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 375px;
+  height: 440px;
+}
+
+.Fonctionnement button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 322px;
+  height: 72.38px;
+  border-radius: 20px;
+  border: none;
+  padding: 0;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+}
+
+.Fonctionnement i:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 15px;
+  border-radius: 25px;
+  background-color: #9356DC;
+  color: #FFFFFF;
+}
+
+/****** Restaurant ***********/
+.restaurant {
+  width: 375px;
+}
+
+.restaurant-cards {
+  width: 340px;
+  height: 1058px;
+}
+
 .card-content img {
   width: 346px;
   height: 231px;
@@ -5,6 +164,12 @@
   left: -3px;
   gap: 0px;
   opacity: 0px;
+}
+
+/****** Footer ***********/
+footer {
+  width: 375px;
+  height: 186px;
 }
 
 /*# sourceMappingURL=styles.css.map */
