@@ -1,8 +1,14 @@
 /****** Variables ***********/
 @import "utils/couleur_variables";
 
+/****** Textes ***********/
+@import "base/text_normalize.scss";
+
 /****** Body ***********/
 body {
+    display: flex;
+    flex-direction: column;
+
     margin: 0;
     width: 375px;
     height: 2252px;
@@ -67,7 +73,7 @@ header {
     align-items: center;
     gap: 30px;
 
-    height: 300px;
+    height: 250px;
     background: #f6f6f6;
 }
 
@@ -128,9 +134,13 @@ header {
     height: 440px;
 }
 
-.Fonctionnement h3{
-    
+.Fonctionnement h2 {
+    display: flex;
+    justify-content: flex-start;
 
+    width: 275px;
+    margin-bottom: 0;
+    margin-right: 70px;
 }
 
 .Fonctionnement button {
@@ -139,12 +149,15 @@ header {
     align-items: center;
     gap: 20px;
 
-    width: 322px;
+    width: 335px;
     height: 72.38px;
     border-radius: 20px;
     border: none;
-
     padding: 0;
+
+    background: #f6f6f6;
+    box-shadow: 0px 4px 15px 0px #00000026;
+
 
     font-family: 'Roboto';
     font-size: 16px;
@@ -160,35 +173,123 @@ header {
     width: 24px;
     height: 24px;
     position: absolute;
-    left: 15px;
+    left: 10px;
     border-radius: 25px;
     background-color: $violet;
     color: $blanc;
 }
 
+.Fonctionnement i:nth-of-type(2) {
+    position: absolute;
+    left: 58px;
+}
+
+.Fonctionnement .button-text {
+    position: absolute;
+    left: 96px;
+    width: 211px;
+    text-align: start;
+}
 
 /****** Restaurant ***********/
 .restaurant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     width: 375px;
+    height: 1263px;
+    background: #f6f6f6;
 }
 
 .restaurant-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
     width: 340px;
     height: 1058px;
 }
 
-.card-content img {
-    width: 346px;
-    height: 231px;
-    top: -57px;
-    left: -3px;
-    gap: 0px;
-    opacity: 0px;
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 340px;
+    height: 251px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px 0px #00000026;
+}
+
+.card img {
+    width: 340px;
+    height: 163.15px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 340px;
+    height: 100px;
+}
+
+.card-txt {
+    display: flex;
+    flex-direction: column;
+
+    width: 267px;
+}
+
+.Like {
+    width: 22px;
+    height: 21px;
+}
+
+.Badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80px;
+    height: 29px;
+    margin: 0;
+
+    position: relative;
+    left: 238px;
+    top: 13px;
+
+    background: $vert-claire;
 }
 
 /****** Footer ***********/
 
 footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
     width: 375px;
     height: 186px;
+    padding: 22px 25px 22px 25px;
+
+    background-color: #353535;
+    color: $blanc;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    width: 190px;
+    padding: 0;
+
+    list-style-type: none;
 }
