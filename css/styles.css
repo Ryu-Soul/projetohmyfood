@@ -27,6 +27,8 @@ p {
   font-style: italic;
   font-weight: 400;
   line-height: 26.24px;
+  padding-top: 22px;
+  padding-left: 25px;
 }
 
 a {
@@ -39,13 +41,13 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
-  width: 375px;
+  width: 100%;
   height: 2252px;
 }
 
 /****** Header ***********/
 header {
-  max-width: 375px;
+  width: 100%;
   height: 113px;
 }
 
@@ -53,7 +55,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 375px;
+  width: 100%;
   height: 63px;
 }
 
@@ -67,8 +69,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 17px;
-  max-width: 375px;
-  width: 375px;
+  width: 100%;
   height: 50px;
   background: #EAEAEA;
   box-shadow: inset 0px 2px 6px 0px rgba(0, 0, 0, 0.2509803922);
@@ -149,9 +150,10 @@ header {
 .Fonctionnement {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
-  width: 375px;
+  gap: 20px;
+  width: 100%;
   height: 440px;
 }
 
@@ -161,6 +163,13 @@ header {
   width: 275px;
   margin-bottom: 0;
   margin-right: 70px;
+  margin-top: 30px;
+}
+
+.Etape {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .Fonctionnement button {
@@ -173,6 +182,7 @@ header {
   border-radius: 20px;
   border: none;
   padding: 0;
+  position: relative;
   background: #f6f6f6;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
   font-family: "Roboto";
@@ -188,7 +198,7 @@ header {
   width: 24px;
   height: 24px;
   position: absolute;
-  left: 10px;
+  left: -11.5px;
   border-radius: 25px;
   background-color: #9356DC;
   color: #FFFFFF;
@@ -196,7 +206,7 @@ header {
 
 .Fonctionnement i:nth-of-type(2) {
   position: absolute;
-  left: 58px;
+  left: 30.5px;
 }
 
 .Fonctionnement .button-text {
@@ -211,7 +221,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 375px;
+  width: 100%;
   height: 1263px;
   background: #f6f6f6;
 }
@@ -232,6 +242,9 @@ header {
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
   position: relative;
+}
+.restaurant a {
+  width: 340px;
 }
 .restaurant img {
   width: 340px;
@@ -305,9 +318,8 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 325px;
+  width: 100%;
   height: 186px;
-  padding: 22px 25px 22px 25px;
   background-color: #353535;
   color: #FFFFFF;
 }
@@ -317,8 +329,53 @@ footer ul {
   flex-direction: column;
   gap: 7px;
   width: 190px;
-  padding: 0;
+  padding: 0px 0px 0px 25px;
   list-style-type: none;
+}
+
+@media (min-width: 1440px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    height: 1395px;
+  }
+  .Recherche h1 {
+    width: 645px;
+  }
+  .Recherche p {
+    width: 645px;
+  }
+  .Fonctionnement {
+    flex-direction: column;
+    justify-content: center;
+    height: 228px;
+    gap: 25px;
+  }
+  .Fonctionnement h2 {
+    width: 1000px;
+    margin-top: 0;
+  }
+  .Etape {
+    flex-direction: row;
+    width: 1053px;
+    gap: 25px;
+  }
+  .restaurant .restaurant-cards {
+    flex-wrap: wrap;
+    column-gap: 100px;
+    height: 552px;
+    width: 1080px;
+  }
+  .restaurant .card {
+    width: 490px;
+    height: 251px;
+  }
+  .restaurant img {
+    width: 498.65px;
+    height: 231px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
