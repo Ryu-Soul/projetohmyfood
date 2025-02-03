@@ -1,0 +1,64 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 0px;
+}
+
+.nom {
+    display: flex;
+    flex-direction: row;
+}
+
+.Entree {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 349px;
+}
+
+.Plat {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 349px;
+}
+
+.Desserts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 349px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+
+    box-shadow: 0px 4.01px 15.04px 0px #0000001A;
+    border-radius: 15.04px;
+
+    width: 349px;
+    height: 69px;
+    padding-left: 10px;
+    & .card-text {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        width: 287px;
+        height: 42px;
+    }
+
+    & .price {
+        position: absolute;
+        right: 15px;
+        bottom: 18px;
+    }
+}

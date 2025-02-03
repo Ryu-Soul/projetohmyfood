@@ -1,0 +1,60 @@
+h1 {
+    font-family: 'Shrikhand';
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 40.82px;
+    text-align: left;
+    text-decoration-skip-ink: none;
+}
+
+h2 {
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18.75px;
+    text-align: left;
+    text-decoration-skip-ink: none;
+
+    border-bottom: solid 3px #99E2D0;
+    width: 40px;
+    padding-bottom: 5px;
+    margin: 0px 0px 15px 0px;
+
+}
+
+h3 {
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.09px;
+    text-align: left;
+    text-decoration-skip-ink: none;
+}
+
+p {
+    font-family: 'Roboto';
+    font-size: 15.04px;
+    font-weight: 300;
+    line-height: 17.63px;
+    text-align: left;
+    text-decoration-skip-ink: none;
+
+}
+
+h1, h3, p {
+    margin: 0;
+}
+
+.logop {
+    font-family: 'Shrikhand';
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 26.24px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}

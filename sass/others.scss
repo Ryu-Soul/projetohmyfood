@@ -1,0 +1,120 @@
+@import "utils/couleur_variables";
+
+@import "layouts/footer";
+
+@import "layouts/body";
+
+@import "components/card";
+
+@import "base/othertext.scss";
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    width: 375px;
+    height: 63px;
+
+    & i {
+        position: absolute;
+        top: 17px;
+        left: 17px;
+        font-size: 30px;
+    }
+
+    & img {
+        width: 197px;
+        height: 36px;
+        object-fit: initial;
+    }
+}
+
+
+
+img {
+    width: 375px;
+    height: 275px;
+    position: relative;
+    z-index: 1;
+    object-fit: cover;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
+    height: 1275px;
+    margin-top: -60px;
+    z-index: 2;
+    border-radius: 50px 50px 0px 0px;
+}
+
+.nom {
+    display: flex;
+    justify-content: space-between;
+    width: 341px;
+    height: 29px;
+
+     & .Like {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 22px;
+        height: 21px;
+        position: relative;
+
+        border: none;
+        background: none;
+
+        & i {
+            font-size: 22px;
+            position: absolute;
+            top: 8px;
+            right: 20px;
+        }
+
+        & i:nth-of-type(2) {
+            color: transparent;
+        }
+
+        &:focus i:first-child {
+            color: transparent;
+        }
+
+        &:focus i:nth-of-type(2) {
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+            background-image: $violet_bouton;
+        }
+     }
+}
+
+
+.commander button {
+    border-radius: 50px;
+    width: 218px;
+    height: 50px;
+    background: $violet_bouton;
+    border: none;
+    margin-bottom: 20px;
+
+    color: $blanc;
+    font-family: 'Roboto';
+    font-weight: 500;
+    size: 16px;
+    line-height: 18.75px;
+    text-align: center;
+}
+
+.menu {
+    background-color: $gris-blanc;
+}

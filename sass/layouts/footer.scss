@@ -1,0 +1,27 @@
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 325px;
+    height: 186px;
+    padding: 22px 25px 22px 25px;
+
+    background-color: #353535;
+    color: $blanc;
+
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    
+    width: 190px;
+    padding: 0;
+    
+    list-style-type: none;
+}
+

@@ -1,0 +1,241 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 325px;
+  height: 186px;
+  padding: 22px 25px 22px 25px;
+  background-color: #353535;
+  color: #FFFFFF;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  width: 190px;
+  padding: 0;
+  list-style-type: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 375px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 0px;
+}
+
+.nom {
+  display: flex;
+  flex-direction: row;
+}
+
+.Entree {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 349px;
+}
+
+.Plat {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 349px;
+}
+
+.Desserts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 349px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
+  border-radius: 15.04px;
+  width: 349px;
+  height: 69px;
+  padding-left: 10px;
+}
+.card .card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 287px;
+  height: 42px;
+}
+.card .price {
+  position: absolute;
+  right: 15px;
+  bottom: 18px;
+}
+
+h1 {
+  font-family: "Shrikhand";
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 40.82px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+}
+
+h2 {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 18.75px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+  border-bottom: solid 3px #99E2D0;
+  width: 40px;
+  padding-bottom: 5px;
+  margin: 0px 0px 15px 0px;
+}
+
+h3 {
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.09px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+}
+
+p {
+  font-family: "Roboto";
+  font-size: 15.04px;
+  font-weight: 300;
+  line-height: 17.63px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+}
+
+h1, h3, p {
+  margin: 0;
+}
+
+.logop {
+  font-family: "Shrikhand";
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 26.24px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 375px;
+  height: 63px;
+}
+header i {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  font-size: 30px;
+}
+header img {
+  width: 197px;
+  height: 36px;
+  object-fit: initial;
+}
+
+img {
+  width: 375px;
+  height: 275px;
+  position: relative;
+  z-index: 1;
+  object-fit: cover;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  height: 1275px;
+  margin-top: -60px;
+  z-index: 2;
+  border-radius: 50px 50px 0px 0px;
+}
+
+.nom {
+  display: flex;
+  justify-content: space-between;
+  width: 341px;
+  height: 29px;
+}
+.nom .Like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 21px;
+  position: relative;
+  border: none;
+  background: none;
+}
+.nom .Like i {
+  font-size: 22px;
+  position: absolute;
+  top: 8px;
+  right: 20px;
+}
+.nom .Like i:nth-of-type(2) {
+  color: transparent;
+}
+.nom .Like:focus i:first-child {
+  color: transparent;
+}
+.nom .Like:focus i:nth-of-type(2) {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  background-image: linear-gradient(to top, #9356DC -11.44%, #FF79DA 123.93%);
+}
+
+.commander button {
+  border-radius: 50px;
+  width: 218px;
+  height: 50px;
+  background: linear-gradient(to top, #9356DC -11.44%, #FF79DA 123.93%);
+  border: none;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+  font-family: "Roboto";
+  font-weight: 500;
+  size: 16px;
+  line-height: 18.75px;
+  text-align: center;
+}
+
+.menu {
+  background-color: #EAEAEA;
+}
+
+/*# sourceMappingURL=others.css.map */
