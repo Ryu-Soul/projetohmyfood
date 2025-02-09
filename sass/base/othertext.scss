@@ -20,8 +20,7 @@ h2 {
     width: 40px;
     padding-bottom: 5px;
     margin: 0px 0px 15px 0px;
-
-}
+}   
 
 h3 {
     font-family: 'Roboto';
@@ -36,7 +35,7 @@ p {
     font-family: 'Roboto';
     font-size: 15.04px;
     font-weight: 300;
-    line-height: 17.63px;
+    line-height: 19px;
     text-align: left;
     text-decoration-skip-ink: none;
 
@@ -52,6 +51,16 @@ h1, h3, p {
     font-style: italic;
     font-weight: 400;
     line-height: 26.24px;
+
+    padding-top: 22px;
+    padding-left: 25px;
+
+    @media (min-width: 1440px) {
+        padding: 0px 25px 0px 0px;
+        margin-bottom: 16px;
+        width: 139px;
+        height: 27px;
+    }
 }
 
 a {

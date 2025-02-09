@@ -217,6 +217,12 @@ header {
         height: 1058px;
     }
 
+    & .nouveau {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
     & .card {
         display: flex;
         flex-direction: column;
@@ -233,7 +239,7 @@ header {
     }
 
     & a {
-        width: 340px;
+        width: 100%;
     }
 
     & img {
@@ -386,22 +392,57 @@ footer ul {
 
     .restaurant  {
 
+        height: 608px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
         & .restaurant-cards {
+        flex-direction: row;
         flex-wrap: wrap;
         column-gap: 100px;
+        row-gap: 28px;
         height: 552px;
         width: 1080px;
         }
 
+        & h2 {
+            width: 1080px;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
         .card {
             width: 490px;
             height: 251px;
         }
 
         & img {
-            width: 498.65px;
-            height: 231px;
+            width: 100%;
+            height: 178.52px;
+        }
+
+        & .card-content {
+            width: 100%;
+            height: 72.38px;
         }
     }
 
+
+    footer {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: flex-end;
+
+        & ul {
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 30px;
+            width: 661px;
+            height: 20px;
+        }
+
+        & li {
+            display: flex;
+            gap: 10px;
+        }
+    }
 }

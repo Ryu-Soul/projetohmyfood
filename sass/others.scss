@@ -8,6 +8,7 @@
 
 @import "base/othertext.scss";
 
+
 header {
     display: flex;
     flex-direction: row;
@@ -35,10 +36,10 @@ header {
 
 
 img {
-    width: 375px;
+    width: 100%;
     height: 275px;
     position: relative;
-    z-index: 1;
+    
     object-fit: cover;
 }
 
@@ -51,8 +52,8 @@ img {
 
     height: 1275px;
     margin-top: -60px;
-    z-index: 2;
     border-radius: 50px 50px 0px 0px;
+    background-color: $gris-blanc;
 }
 
 .nom {
@@ -115,6 +116,53 @@ img {
     text-align: center;
 }
 
-.menu {
-    background-color: $gris-blanc;
+
+@media (min-width: 1440px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+    
+        margin: 0;
+        width: 100%;
+        height: 1705px;
+    }
+
+    header {
+        width: 100%;
+        height: 96.34px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        & img {
+            height: 383px;
+            width: 100%;
+        }
+    }
+
+    .menu {
+        width: 1055px;
+        height: 1164px;
+        margin-top: -20px;
+
+        & .nom {
+            width: 307px;
+            height: 41px;
+
+            & .Like {
+
+                & i {
+                    top: 8px;
+                    right: 0px;
+                }
+            }
+        }
+
+    }
+
+
 }

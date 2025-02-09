@@ -3,20 +3,37 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 325px;
+  width: 100%;
   height: 186px;
-  padding: 22px 25px 22px 25px;
   background-color: #353535;
   color: #FFFFFF;
 }
-
 footer ul {
   display: flex;
   flex-direction: column;
   gap: 7px;
   width: 190px;
-  padding: 0;
+  padding: 0px 0px 0px 25px;
   list-style-type: none;
+}
+@media (min-width: 1440px) {
+  footer {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 114px;
+  }
+  footer ul {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 30px;
+    width: 661px;
+    height: 20px;
+  }
+  footer li {
+    display: flex;
+    gap: 10px;
+  }
 }
 
 body {
@@ -44,12 +61,22 @@ body {
   gap: 10px;
   width: 349px;
 }
+@media (min-width: 1440px) {
+  .Entree {
+    width: 634px;
+  }
+}
 
 .Plat {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 349px;
+}
+@media (min-width: 1440px) {
+  .Plat {
+    width: 634px;
+  }
 }
 
 .Desserts {
@@ -58,30 +85,81 @@ body {
   gap: 10px;
   width: 349px;
 }
+@media (min-width: 1440px) {
+  .Desserts {
+    width: 634px;
+  }
+}
 
 .card {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   position: relative;
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
   border-radius: 15.04px;
+  border: none;
   width: 349px;
   height: 69px;
-  padding-left: 10px;
+  padding: 0;
+  overflow: hidden;
 }
 .card .card-text {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  padding-left: 10px;
   width: 287px;
-  height: 42px;
+  height: 44px;
+}
+.card .card-text p, .card .card-text h3 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@media (min-width: 1440px) {
+  .card .card-text {
+    width: 572px;
+  }
 }
 .card .price {
   position: absolute;
-  right: 15px;
-  bottom: 18px;
+  right: 10px;
+  top: 37px;
+  transition-duration: 1s;
+  transform: translateX(0%);
+}
+@media (min-width: 1440px) {
+  .card {
+    width: 634px;
+  }
+}
+.card .check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 59px;
+  height: 69px;
+  border-radius: 0px 15px 15px 0px;
+  border: none;
+  transition-duration: 1s;
+  transform: translateX(110%);
+  background-color: aquamarine;
+}
+.card .check i {
+  color: white;
+  font-size: 20px;
+}
+.card:focus .check {
+  transform: translateX(0%);
+}
+.card:focus .price {
+  transform: translateX(-250%);
+}
+.card:focus:focus .card-text {
+  width: 200px;
+  transition: font-size 0.3s ease;
 }
 
 h1 {
@@ -120,7 +198,7 @@ p {
   font-family: "Roboto";
   font-size: 15.04px;
   font-weight: 300;
-  line-height: 17.63px;
+  line-height: 19px;
   text-align: left;
   text-decoration-skip-ink: none;
 }
@@ -135,6 +213,16 @@ h1, h3, p {
   font-style: italic;
   font-weight: 400;
   line-height: 26.24px;
+  padding-top: 22px;
+  padding-left: 25px;
+}
+@media (min-width: 1440px) {
+  .logop {
+    padding: 0px 25px 0px 0px;
+    margin-bottom: 16px;
+    width: 139px;
+    height: 27px;
+  }
 }
 
 a {
@@ -164,10 +252,9 @@ header img {
 }
 
 img {
-  width: 375px;
+  width: 100%;
   height: 275px;
   position: relative;
-  z-index: 1;
   object-fit: cover;
 }
 
@@ -179,8 +266,8 @@ img {
   position: relative;
   height: 1275px;
   margin-top: -60px;
-  z-index: 2;
   border-radius: 50px 50px 0px 0px;
+  background-color: #EAEAEA;
 }
 
 .nom {
@@ -234,8 +321,40 @@ img {
   text-align: center;
 }
 
-.menu {
-  background-color: #EAEAEA;
+@media (min-width: 1440px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    height: 1705px;
+  }
+  header {
+    width: 100%;
+    height: 96.34px;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main img {
+    height: 383px;
+    width: 100%;
+  }
+  .menu {
+    width: 1055px;
+    height: 1164px;
+    margin-top: -20px;
+  }
+  .menu .nom {
+    width: 307px;
+    height: 41px;
+  }
+  .menu .nom .Like i {
+    top: 8px;
+    right: 0px;
+  }
 }
 
 /*# sourceMappingURL=others.css.map */
