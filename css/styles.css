@@ -240,6 +240,12 @@ header {
   width: 340px;
   height: 1058px;
 }
+@media (min-width: 768px) {
+  .restaurant .restaurant-cards {
+    max-width: 490px;
+    width: 100%;
+  }
+}
 .restaurant .nouveau {
   display: flex;
   flex-direction: column;
@@ -256,6 +262,12 @@ header {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
   position: relative;
 }
+@media (min-width: 768px) {
+  .restaurant .card {
+    max-width: 490px;
+    width: 100%;
+  }
+}
 .restaurant a {
   width: 100%;
 }
@@ -265,6 +277,12 @@ header {
   border-radius: 15px 15px 0px 0px;
   object-fit: cover;
 }
+@media (min-width: 768px) {
+  .restaurant img {
+    max-width: 490px;
+    width: 100%;
+  }
+}
 .restaurant .card-content {
   display: flex;
   flex-direction: row;
@@ -273,10 +291,22 @@ header {
   width: 340px;
   height: 100px;
 }
+@media (min-width: 768px) {
+  .restaurant .card-content {
+    max-width: 490px;
+    width: 100%;
+  }
+}
 .restaurant .card-txt {
   display: flex;
   flex-direction: column;
   width: 267px;
+}
+@media (min-width: 768px) {
+  .restaurant .card-txt {
+    max-width: 490px;
+    width: 71%;
+  }
 }
 .restaurant .Like {
   display: flex;
@@ -387,6 +417,7 @@ footer ul {
     row-gap: 28px;
     height: 552px;
     width: 1080px;
+    max-width: none;
   }
   .restaurant h2 {
     width: 1080px;
