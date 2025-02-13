@@ -1,3 +1,14 @@
+h1 {
+  width: 275px;
+  height: 68px;
+  font-family: "Roboto";
+  font-weight: 700;
+  size: 24px;
+  line-height: 28.13px;
+  text-align: center;
+  margin: 0;
+}
+
 h2 {
   font-family: "Roboto";
   font-size: 24px;
@@ -44,35 +55,36 @@ a {
   text-decoration: none;
 }
 
-/****** Body ***********/
 body {
   display: flex;
   flex-direction: column;
-  margin: 0;
+  align-items: center;
   width: 100%;
   height: 2252px;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  body {
+    height: 1395px;
+  }
 }
 
-/****** Header ***********/
 header {
   width: 100%;
   height: 113px;
 }
-
-.logo {
+header .logo {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 63px;
 }
-
-.logo img {
+header .logo img {
   max-width: 162px;
   max-height: 44px;
 }
-
-.location {
+header .location {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,21 +94,32 @@ header {
   background: #EAEAEA;
   box-shadow: inset 0px 2px 6px 0px rgba(0, 0, 0, 0.2509803922);
 }
-
-.location input {
+header .location input {
   width: 110px;
   height: 19px;
   border: none;
   background: none;
 }
-
-.location input::placeholder {
+header .location input::placeholder {
   width: 109px;
   color: #353535;
   font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
   line-height: 18.75px;
+}
+@media (min-width: 1440px) {
+  header {
+    height: 146px;
+  }
+  header .logo {
+    height: 96px;
+  }
+}
+
+/****** Main ********/
+main {
+  width: 100%;
 }
 
 /****** Recherche ***********/
@@ -106,10 +129,10 @@ header {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  height: 250px;
+  height: 300px;
   background: #f6f6f6;
+  box-shadow: inset 0px 2px 6px 0px rgba(0, 0, 0, 0.2509803922);
 }
-
 .Recherche .bloc1 {
   display: flex;
   flex-direction: column;
@@ -117,41 +140,34 @@ header {
   align-items: center;
   width: 100%;
 }
-
-.Recherche h1 {
-  width: 275px;
-  height: 68px;
-  font-family: "Roboto";
-  font-weight: 700;
-  size: 24px;
-  line-height: 28.13px;
-  text-align: center;
-  margin: 0;
-}
-
 .Recherche p {
   width: 315px;
   height: 46px;
-  font-family: "Roboto";
-  font-weight: 300;
-  size: 18px;
-  line-height: 21.09px;
   text-align: center;
-  margin: 0;
 }
-
 .Recherche button {
-  border-radius: 50px;
   width: 218px;
   height: 50px;
   background: linear-gradient(to top, #9356DC -11.44%, #FF79DA 123.93%);
   border: none;
+  border-radius: 50px;
   color: #FFFFFF;
   font-family: "Roboto";
   font-weight: 500;
   size: 16px;
   line-height: 18.75px;
   text-align: center;
+}
+@media (min-width: 1440px) {
+  .Recherche {
+    height: 250px;
+  }
+  .Recherche h1 {
+    width: 100%;
+  }
+  .Recherche p {
+    width: 100%;
+  }
 }
 
 /****** Fonctionnement ***********/
@@ -164,7 +180,6 @@ header {
   width: 100%;
   height: 440px;
 }
-
 .Fonctionnement h2 {
   display: flex;
   justify-content: flex-start;
@@ -173,13 +188,13 @@ header {
   margin-right: 70px;
   margin-top: 30px;
 }
-
-.Etape {
+.Fonctionnement .Etape {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
 }
-
 .Fonctionnement button {
   display: flex;
   justify-content: center;
@@ -198,7 +213,6 @@ header {
   font-weight: 500;
   line-height: 18.75px;
 }
-
 .Fonctionnement i:first-child {
   display: flex;
   justify-content: center;
@@ -211,17 +225,51 @@ header {
   background-color: #9356DC;
   color: #FFFFFF;
 }
-
 .Fonctionnement i:nth-of-type(2) {
   position: absolute;
   left: 30.5px;
 }
-
 .Fonctionnement .button-text {
   position: absolute;
   left: 96px;
   width: 211px;
   text-align: start;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .Fonctionnement .Etape {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .Fonctionnement {
+    height: 228px;
+  }
+  .Fonctionnement h2 {
+    width: 890px;
+  }
+  .Fonctionnement .Etape {
+    flex-direction: row;
+  }
+  .Fonctionnement button {
+    width: 300px;
+  }
+}
+@media (min-width: 1440px) {
+  .Fonctionnement {
+    flex-direction: column;
+    justify-content: center;
+    height: 228px;
+    gap: 25px;
+  }
+  .Fonctionnement h2 {
+    width: 1000px;
+    margin-top: 0;
+  }
+  .Fonctionnement .Etape {
+    flex-direction: row;
+    width: 1053px;
+    gap: 25px;
+  }
 }
 
 /****** Restaurant ***********/
@@ -230,8 +278,12 @@ header {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 1263px;
+  height: 1213px;
   background: #f6f6f6;
+}
+.restaurant h2 {
+  width: 340px;
+  margin-top: 50px;
 }
 .restaurant .restaurant-cards {
   display: flex;
@@ -239,12 +291,6 @@ header {
   gap: 18px;
   width: 340px;
   height: 1058px;
-}
-@media (min-width: 768px) {
-  .restaurant .restaurant-cards {
-    max-width: 490px;
-    width: 100%;
-  }
 }
 .restaurant .nouveau {
   display: flex;
@@ -262,12 +308,6 @@ header {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
   position: relative;
 }
-@media (min-width: 768px) {
-  .restaurant .card {
-    max-width: 490px;
-    width: 100%;
-  }
-}
 .restaurant a {
   width: 100%;
 }
@@ -277,12 +317,6 @@ header {
   border-radius: 15px 15px 0px 0px;
   object-fit: cover;
 }
-@media (min-width: 768px) {
-  .restaurant img {
-    max-width: 490px;
-    width: 100%;
-  }
-}
 .restaurant .card-content {
   display: flex;
   flex-direction: row;
@@ -291,22 +325,10 @@ header {
   width: 340px;
   height: 100px;
 }
-@media (min-width: 768px) {
-  .restaurant .card-content {
-    max-width: 490px;
-    width: 100%;
-  }
-}
 .restaurant .card-txt {
   display: flex;
   flex-direction: column;
   width: 267px;
-}
-@media (min-width: 768px) {
-  .restaurant .card-txt {
-    max-width: 490px;
-    width: 71%;
-  }
 }
 .restaurant .Like {
   display: flex;
@@ -354,57 +376,7 @@ header {
   font-weight: 500;
   line-height: 16.41px;
 }
-
-/****** Footer ***********/
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  height: 186px;
-  background-color: #353535;
-  color: #FFFFFF;
-}
-
-footer ul {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-  width: 190px;
-  padding: 0px 0px 0px 25px;
-  list-style-type: none;
-}
-
 @media (min-width: 1440px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    width: 100%;
-    height: 1395px;
-  }
-  .Recherche h1 {
-    width: 645px;
-  }
-  .Recherche p {
-    width: 645px;
-  }
-  .Fonctionnement {
-    flex-direction: column;
-    justify-content: center;
-    height: 228px;
-    gap: 25px;
-  }
-  .Fonctionnement h2 {
-    width: 1000px;
-    margin-top: 0;
-  }
-  .Etape {
-    flex-direction: row;
-    width: 1053px;
-    gap: 25px;
-  }
   .restaurant {
     height: 608px;
     padding-top: 30px;
@@ -436,10 +408,103 @@ footer ul {
     width: 100%;
     height: 72.38px;
   }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .restaurant .restaurant-cards {
+    max-width: 490px;
+    width: 100%;
+  }
+  .restaurant .card {
+    max-width: 490px;
+    width: 100%;
+  }
+  .restaurant img {
+    max-width: 490px;
+    width: 100%;
+  }
+  .restaurant .card-content {
+    max-width: 490px;
+    width: 100%;
+  }
+  .restaurant .button-text {
+    max-width: 490px;
+    width: 71%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .restaurant {
+    height: 700px;
+  }
+  .restaurant .restaurant-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 900px;
+    height: 552px;
+    row-gap: 28px;
+    column-gap: 100px;
+  }
+  .restaurant .card {
+    width: 400px;
+    height: 251px;
+  }
+  .restaurant img {
+    width: 100%;
+    height: 178.52px;
+  }
+  .restaurant .card-content {
+    width: 100%;
+    height: 72.38px;
+  }
+}
+
+/****** Footer ***********/
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 186px;
+  background-color: #353535;
+  color: #FFFFFF;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  width: 190px;
+  padding: 0px 0px 0px 25px;
+  list-style-type: none;
+}
+@media (min-width: 1440px) {
   footer {
     flex-direction: row-reverse;
     justify-content: flex-start;
     align-items: flex-end;
+    height: 114px;
+  }
+  footer ul {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 30px;
+    width: 661px;
+    height: 20px;
+  }
+  footer li {
+    display: flex;
+    gap: 10px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  footer {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 104px;
+  }
+  footer .logop {
+    margin-bottom: 10px;
+    margin-right: 20px;
   }
   footer ul {
     flex-direction: row;

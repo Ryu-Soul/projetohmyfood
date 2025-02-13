@@ -3,64 +3,14 @@
 
 @import "base/text_normalize";
 
-/****** Body ***********/
-body {
-    display: flex;
-    flex-direction: column;
+@import "layouts/body.scss";
 
-    margin: 0;
+@import "layouts/header.scss";
+
+
+/****** Main ********/
+main {
     width: 100%;
-    height: 2252px;
-}
-/****** Header ***********/
-
-header {
-    width: 100%;
-    height: 113px;
-}
-
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width:100%;
-    height: 63px;
-}
-
-.logo img {
-    max-width: 162px;
-    max-height: 44px;
-}
-
-.location {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 17px;
-    
-    width: 100%;
-    height: 50px;
-
-    background: $gris-blanc;
-    box-shadow: inset 0px 2px 6px 0px #00000040;
-}
-
-.location input {
-    width: 110px;
-    height: 19px;
-    border: none;
-    background: none;
-}
-
-.location input::placeholder {
-    width: 109px;
-    color: $noir;
-    font-family: "Roboto";
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 18.75px;
-
 }
 
 /****** Recherche ***********/
@@ -71,54 +21,54 @@ header {
     align-items: center;
     gap: 30px;
 
-    height: 250px;
+    height: 300px;
+
     background: #f6f6f6;
-}
+    box-shadow: inset 0px 2px 6px 0px #00000040;
 
-.Recherche .bloc1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    & .bloc1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        width: 100%;
+    }
 
-    width: 100%;
-}
+    & p {
+        width: 315px;
+        height: 46px;
+        
+        text-align: center;
+    }
 
-.Recherche h1 {
-    width: 275px;
-    height: 68px;
-    font-family: 'Roboto';
-    font-weight: 700;
-    size: 24px;
-    line-height: 28.13px;
-    text-align: center;
-    margin: 0;
-}
+    & button {
+        width: 218px;
+        height: 50px;
 
-.Recherche p {
-    width: 315px;
-    height: 46px;
-    font-family: 'Roboto';
-    font-weight: 300;
-    size: 18px;
-    line-height: 21.09px;
-    text-align: center;
-    margin: 0;
-}
+        background: $violet_bouton;
+        border: none;
+        border-radius: 50px;
+    
+        color: $blanc;
+        font-family: 'Roboto';
+        font-weight: 500;
+        size: 16px;
+        line-height: 18.75px;
+        text-align: center;
+    }
 
-.Recherche button {
-    border-radius: 50px;
-    width: 218px;
-    height: 50px;
-    background: $violet_bouton;
-    border: none;
+    @media (min-width: 1440px) {
+        height: 250px;
 
-    color: $blanc;
-    font-family: 'Roboto';
-    font-weight: 500;
-    size: 16px;
-    line-height: 18.75px;
-    text-align: center;
+        h1 {
+        width: 100%;
+        }
+    
+        p {
+        width: 100%;
+        }
+    }
 }
 
 /****** Fonctionnement ***********/
@@ -131,71 +81,112 @@ header {
 
     width: 100%;
     height: 440px;
-}
 
-.Fonctionnement h2 {
-    display: flex;
-    justify-content: flex-start;
+    & h2 {
+        display: flex;
+        justify-content: flex-start;
+    
+        width: 275px;
+        margin-bottom: 0;
+        margin-right: 70px;
+        margin-top: 30px;
+    }
+    
+    & .Etape {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
 
-    width: 275px;
-    margin-bottom: 0;
-    margin-right: 70px;
-    margin-top: 30px;
-}
+    & button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    
+        width: 335px;
+        height: 72.38px;
+    
+        border-radius: 20px;
+        border: none;
+        padding: 0;
+        position: relative;
+        background: #f6f6f6;
+        box-shadow: 0px 4px 15px 0px #00000026;
+    
+        font-family: 'Roboto';
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18.75px;
+    }
 
-.Etape {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
+    & i:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        width: 24px;
+        height: 24px;
 
-.Fonctionnement button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+        position: absolute;
+        left: -11.5px;
+        border-radius: 25px;
+        background-color: $violet;
+        color: $blanc;
+    }
 
-    width: 335px;
-    height: 72.38px;
-    border-radius: 20px;
-    border: none;
-    padding: 0;
-    position: relative;
+    & i:nth-of-type(2) {
+        position: absolute;
+        left: 30.5px;
+    }
 
-    background: #f6f6f6;
-    box-shadow: 0px 4px 15px 0px #00000026;
+    & .button-text {
+        position: absolute;
+        left: 96px;
+        width: 211px;
+        text-align: start;
+    }
 
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .Etape {
+            width: 100%;
+        }
+    }
 
-    font-family: 'Roboto';
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 18.75px;
-}
+    @media (min-width: 1024px) and (max-width: 1439px) {
+        height: 228px;
 
-.Fonctionnement i:first-child {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        h2 {
+            width: 890px;
+        }
+        .Etape {
+            flex-direction: row;
+        }
 
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    left: -11.5px;
-    border-radius: 25px;
-    background-color: $violet;
-    color: $blanc;
-}
+        button {
+            width: 300px;
+        }
+    }
 
-.Fonctionnement i:nth-of-type(2) {
-    position: absolute;
-    left: 30.5px;
-}
-
-.Fonctionnement .button-text {
-    position: absolute;
-    left: 96px;
-    width: 211px;
-    text-align: start;
+    @media (min-width: 1440px) {
+        flex-direction: column;
+        justify-content: center;
+        height: 228px;
+        gap: 25px;
+    
+        h2 {
+            width: 1000px;
+            margin-top: 0;
+        }
+    
+        .Etape {
+            flex-direction: row;
+            width: 1053px;
+            gap: 25px;
+        }
+    }    
 }
 
 /****** Restaurant ***********/
@@ -205,8 +196,14 @@ header {
     align-items: center;
 
     width: 100%;
-    height: 1263px;
+    height: 1213px;
+
     background: #f6f6f6;
+
+    & h2 {
+        width: 340px;
+        margin-top: 50px;
+    }
 
     & .restaurant-cards {
         display: flex;
@@ -215,12 +212,6 @@ header {
 
         width: 340px;
         height: 1058px;
-
-        @media (min-width: 768px)  {
-            max-width: 490px;
-            width: 100%;
-        }
-        
     }
 
     & .nouveau {
@@ -241,12 +232,6 @@ header {
         box-shadow: 0px 4px 15px 0px #00000026;
 
         position: relative;
-
-        @media (min-width: 768px)  {
-            max-width: 490px;
-            width: 100%;
-        }
-
     }
 
     & a {
@@ -259,11 +244,6 @@ header {
         border-radius: 15px 15px 0px 0px;
 
         object-fit: cover;
-
-        @media (min-width: 768px)  {
-            max-width: 490px;
-            width: 100%;
-        }
     }
 
     & .card-content {
@@ -274,11 +254,6 @@ header {
 
         width: 340px;
         height: 100px;
-
-        @media (min-width: 768px)  {
-            max-width: 490px;
-            width: 100%;
-        }
     }
 
     & .card-txt {
@@ -286,11 +261,6 @@ header {
         flex-direction: column;
 
         width: 267px;
-
-        @media (min-width: 768px)  {
-            max-width: 490px;
-            width: 71%;
-        }
     }
 
     & .Like {
@@ -325,7 +295,6 @@ header {
             -moz-text-fill-color: transparent;
             background-image: $violet_bouton;
         }
-
     }
 
     & .Badge {
@@ -351,6 +320,100 @@ header {
         line-height: 16.41px;
         }
     }
+
+    @media (min-width: 1440px) {
+        height: 608px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+            
+    
+        & .restaurant-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 100px;
+        row-gap: 28px;
+    
+        height: 552px;
+        width: 1080px;
+        max-width: none;
+        }
+    
+        h2 {
+            width: 1080px;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+        .card {
+            width: 490px;
+            height: 251px;
+        }
+    
+        img {
+            width: 100%;
+            height: 178.52px;
+        }
+    
+        .card-content {
+            width: 100%;
+            height: 72.38px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .restaurant-cards {
+            max-width: 490px;
+            width: 100%;
+        }
+
+        .card {
+            max-width: 490px;
+            width: 100%;
+        }
+
+        img {
+            max-width: 490px;
+            width: 100%;
+        }
+
+        .card-content {
+            max-width: 490px;
+            width: 100%;
+        }
+
+        .button-text {
+            max-width: 490px;
+            width: 71%;
+        }
+    }
+
+    @media (min-width: 1024px) and (max-width: 1439px) {
+        height: 700px;
+
+        .restaurant-cards {
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            width: 900px;
+            height: 552px;
+            row-gap: 28px;
+            column-gap: 100px;
+        }
+
+        .card {
+            width: 400px;
+            height: 251px;
+        }
+    
+        img {
+            width: 100%;
+            height: 178.52px;
+        }
+    
+        .card-content {
+            width: 100%;
+            height: 72.38px;
+        }
+    }
 }
 
 /****** Footer ***********/
@@ -364,113 +427,65 @@ footer {
     width: 100%;
     height: 186px;
     
-
     background-color: #353535;
     color: $blanc;
-}
 
-footer ul {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-
-    width: 190px;
-    padding: 0px 0px 0px 25px;
-
-    list-style-type: none;
-}
-
-@media (min-width: 1440px) {
-    body {
+    & ul {
         display: flex;
         flex-direction: column;
+        gap: 7px;
     
-        margin: 0;
-        width: 100%;
-        height: 1395px;
+        width: 190px;
+        padding: 0px 0px 0px 25px;
+    
+        list-style-type: none;
     }
 
-    .Recherche h1 {
-        width: 645px;
-    }
-
-    .Recherche p {
-        width: 645px;
-    }
-
-    .Fonctionnement {
-        flex-direction: column;
-        justify-content: center;
-        height: 228px;
-        gap: 25px;
-
-        & h2 {
-            width: 1000px;
-            margin-top: 0;
-        }
-    }
-
-    .Etape {
-        flex-direction: row;
-        width: 1053px;
-        gap: 25px;
-    }
-
-    .restaurant  {
-
-        height: 608px;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        
-
-        & .restaurant-cards {
-        flex-direction: row;
-        flex-wrap: wrap;
-        column-gap: 100px;
-        row-gap: 28px;
-        height: 552px;
-        width: 1080px;
-        max-width: none;
-        }
-
-        & h2 {
-            width: 1080px;
-            margin-top: 0;
-            margin-bottom: 30px;
-        }
-        .card {
-            width: 490px;
-            height: 251px;
-        }
-
-        & img {
-            width: 100%;
-            height: 178.52px;
-        }
-
-        & .card-content {
-            width: 100%;
-            height: 72.38px;
-        }
-    }
-
-
-    footer {
+    @media (min-width: 1440px) {
         flex-direction: row-reverse;
         justify-content: flex-start;
         align-items: flex-end;
+        height: 114px;
 
-        & ul {
+        ul {
             flex-direction: row;
             justify-content: flex-start;
             gap: 30px;
+    
             width: 661px;
             height: 20px;
         }
-
-        & li {
+    
+        li {
             display: flex;
             gap: 10px;
         }
-    }
+    } 
+
+    @media (min-width: 1024px) and (max-width: 1439px) {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: flex-end;
+        height: 104px;
+        
+        .logop {
+            margin-bottom: 10px;
+            margin-right: 20px;
+        }
+
+        ul {
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 30px;
+    
+            width: 661px;
+            height: 20px;
+        }
+    
+        li {
+            display: flex;
+            gap: 10px;
+        }
+    } 
 }
+
