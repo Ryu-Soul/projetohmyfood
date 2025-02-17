@@ -1,9 +1,4 @@
-.menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 0px;
-}
+@import "../utils/keyframes";
 
 .nom {
     display: flex;
@@ -78,6 +73,7 @@
     height: 69px;
     padding: 0;
     overflow: hidden;
+    animation: scaleInCard 2s;
 
     @media (min-width: 768px) {
         width: 100%;
@@ -113,9 +109,6 @@
         transform: translateX(0%)
      }
 
-
-    
-
     @media (min-width: 1440px) {
         width: 634px;
     }
@@ -133,7 +126,6 @@
         transform: translateX(110%);
         background-color: aquamarine;
         
-
         & i {
             color: white;
             font-size: 20px;
@@ -142,17 +134,26 @@
 
     &:focus {
         & .check {
-        transform: translateX(0%);
+        animation: slideInCheck 1s forwards;
     }
 
     & .price {
-        transform: translateX(-250%);
+        animation: slideInPrice 1s forwards;
         }
 
-    &:focus .card-text  {
+    & .card-text  {
         width: 200px;
         transition: font-size 0.3s ease;
     }
+    }
+
+    &:not(:focus) {
+        & .check {
+            animation: slideOutCheck 1s forwards;
+        }
+        & .price {
+            animation: slideOutPrice 1s forwards;
+        }
     }
 }
 

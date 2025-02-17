@@ -39,19 +39,63 @@ footer ul {
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin: 0;
   width: 100%;
+  min-height: 1275px;
+  max-height: 1670px;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  body {
+    height: 1395px;
+  }
 }
 
-.menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  gap: 0px;
+@keyframes slideInCheck {
+  from {
+    transform: translateX(110%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }
-
+@keyframes slideOutCheck {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(110%);
+  }
+}
+@keyframes slideInPrice {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-250%);
+  }
+}
+@keyframes slideOutPrice {
+  from {
+    transform: translateX(-250%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes scaleInCard {
+  0% {
+    transform: scale(0%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
 .nom {
   display: flex;
   flex-direction: row;
@@ -124,6 +168,7 @@ body {
   height: 69px;
   padding: 0;
   overflow: hidden;
+  animation: scaleInCard 2s;
 }
 @media (min-width: 768px) {
   .card {
@@ -177,14 +222,20 @@ body {
   font-size: 20px;
 }
 .card:focus .check {
-  transform: translateX(0%);
+  animation: slideInCheck 1s forwards;
 }
 .card:focus .price {
-  transform: translateX(-250%);
+  animation: slideInPrice 1s forwards;
 }
-.card:focus:focus .card-text {
+.card:focus .card-text {
   width: 200px;
   transition: font-size 0.3s ease;
+}
+.card:not(:focus) .check {
+  animation: slideOutCheck 1s forwards;
+}
+.card:not(:focus) .price {
+  animation: slideOutPrice 1s forwards;
 }
 
 h1 {
@@ -275,6 +326,19 @@ header img {
   height: 36px;
   object-fit: initial;
 }
+@media (min-width: 1440px) {
+  header {
+    height: 96px;
+  }
+  header i {
+    top: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1439px) {
+  header i {
+    top: 10px;
+  }
+}
 
 img {
   width: 100%;
@@ -296,12 +360,14 @@ main {
   justify-content: space-around;
   align-items: center;
   position: relative;
+  gap: 0;
   min-width: 375px;
   width: 73%;
-  height: 1275px;
+  min-height: 1089px;
   margin-top: -60px;
   border-radius: 50px 50px 0px 0px;
   background-color: #EAEAEA;
+  overflow: hidden;
 }
 
 .nom {
@@ -309,6 +375,7 @@ main {
   justify-content: space-between;
   width: 341px;
   height: 29px;
+  margin-top: 20px;
 }
 .nom .Like {
   display: flex;
@@ -390,7 +457,7 @@ main {
     right: 0px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1440px) {
   body {
     display: flex;
     flex-direction: column;

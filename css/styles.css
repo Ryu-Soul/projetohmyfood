@@ -195,6 +195,9 @@ main {
   align-items: center;
   gap: 30px;
 }
+.Fonctionnement .Etape :hover {
+  color: #9356DC;
+}
 .Fonctionnement button {
   display: flex;
   justify-content: center;

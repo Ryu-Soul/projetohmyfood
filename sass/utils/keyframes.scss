@@ -1,0 +1,49 @@
+@keyframes slideInCheck {
+    from {
+        transform: translateX(110%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideOutCheck {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(110%);
+    }
+}
+
+@keyframes slideInPrice {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-250%);
+    }
+}
+
+@keyframes slideOutPrice {
+    from {
+        transform: translateX(-250%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes scaleInCard {
+    0% {
+        transform: scale(0%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100%{
+        transform: scale(100%);
+        opacity: 1;
+    }
+}

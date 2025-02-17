@@ -1,12 +1,12 @@
 @import "utils/couleur_variables";
 
-@import "layouts/footer";
+@import "layouts/footer_others";
 
-@import "layouts/body";
+@import "layouts/body_others";
 
-@import "components/card";
+@import "components/card_others";
 
-@import "base/othertext";
+@import "base/others_text";
 
 
 header {
@@ -32,11 +32,19 @@ header {
         object-fit: initial;
     }
 
+    @media (min-width: 1440px) {
+        height: 96px;
+        i {
+            top: 20px;
+        }
+    }
 
-    
+    @media (min-width: 768px) and (max-width:1439px) {
+        i {
+            top: 10px;
+        }
+    }
 }
-
-
 
 img {
     width: 100%;
@@ -59,13 +67,16 @@ main {
     justify-content: space-around;
     align-items: center;
     position: relative;
+    gap: 0;
 
     min-width: 375px;
     width: 73%;
-    height: 1275px;
+    min-height: 1089px;
+
     margin-top: -60px;
     border-radius: 50px 50px 0px 0px;
     background-color: $gris-blanc;
+    overflow: hidden;
 }
 
 .nom {
@@ -73,6 +84,7 @@ main {
     justify-content: space-between;
     width: 341px;
     height: 29px;
+    margin-top: 20px;
 
      & .Like {
         display: flex;
@@ -179,7 +191,7 @@ main {
 
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1440px) {
 
     body {
         display: flex;
@@ -211,7 +223,6 @@ main {
         height: 1164px;
         margin-top: -20px;
         
-
         & .nom {
             width: 307px;
             height: 41px;
@@ -226,6 +237,4 @@ main {
         }
 
     }
-
-
 }
