@@ -438,6 +438,10 @@ footer {
     background-color: #353535;
     color: $blanc;
 
+    & nav {
+        font-family: 'Roboto';
+    }
+    
     & ul {
         display: flex;
         flex-direction: column;

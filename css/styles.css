@@ -472,6 +472,9 @@ footer {
   background-color: #353535;
   color: #FFFFFF;
 }
+footer nav {
+  font-family: "Roboto";
+}
 footer ul {
   display: flex;
   flex-direction: column;
