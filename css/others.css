@@ -85,14 +85,14 @@ body {
 }
 @keyframes scaleInCard {
   0% {
-    transform: scale(0%);
+    transform: scale(0);
     opacity: 0;
   }
   50% {
     opacity: 0.5;
   }
   100% {
-    transform: scale(100%);
+    transform: scale(1);
     opacity: 1;
   }
 }
@@ -417,7 +417,6 @@ main {
   color: #FFFFFF;
   font-family: "Roboto";
   font-weight: 500;
-  size: 16px;
   line-height: 18.75px;
   text-align: center;
 }

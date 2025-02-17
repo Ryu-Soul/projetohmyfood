@@ -3,7 +3,6 @@ h1 {
   height: 68px;
   font-family: "Roboto";
   font-weight: 700;
-  size: 24px;
   line-height: 28.13px;
   text-align: center;
   margin: 0;
@@ -154,7 +153,6 @@ main {
   color: #FFFFFF;
   font-family: "Roboto";
   font-weight: 500;
-  size: 16px;
   line-height: 18.75px;
   text-align: center;
 }
@@ -226,6 +224,9 @@ main {
   left: -11.5px;
   border-radius: 25px;
   background-color: #9356DC;
+  color: #FFFFFF;
+}
+.Fonctionnement i:first-child:hover {
   color: #FFFFFF;
 }
 .Fonctionnement i:nth-of-type(2) {
