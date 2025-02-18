@@ -1,4 +1,5 @@
 @import "../utils/keyframes";
+@import "../utils/couleur_variables";
 
 .nom {
     display: flex;
@@ -74,6 +75,7 @@
     padding: 0;
     overflow: hidden;
     animation: scaleInCard 2s;
+    background-color: $blanc;
 
     @media (min-width: 768px) {
         width: 100%;

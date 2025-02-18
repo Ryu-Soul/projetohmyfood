@@ -172,6 +172,7 @@ body {
   padding: 0;
   overflow: hidden;
   animation: scaleInCard 2s;
+  background-color: #FFFFFF;
 }
 @media (min-width: 768px) {
   .card {
