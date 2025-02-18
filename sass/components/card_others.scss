@@ -132,7 +132,7 @@
         }
     }
 
-    &:focus {
+    &:hover {
         & .check {
         animation: slideInCheck 1s forwards;
     }
@@ -147,7 +147,7 @@
     }
     }
 
-    &:not(:focus) {
+    &:not(:hover) {
         & .check {
             animation: slideOutCheck 1s forwards;
         }

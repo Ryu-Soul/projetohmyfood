@@ -8,6 +8,9 @@ footer {
   background-color: #353535;
   color: #FFFFFF;
 }
+footer nav {
+  font-family: "Roboto";
+}
 footer ul {
   display: flex;
   flex-direction: column;
@@ -221,20 +224,20 @@ body {
   color: white;
   font-size: 20px;
 }
-.card:focus .check {
+.card:hover .check {
   animation: slideInCheck 1s forwards;
 }
-.card:focus .price {
+.card:hover .price {
   animation: slideInPrice 1s forwards;
 }
-.card:focus .card-text {
+.card:hover .card-text {
   width: 200px;
   transition: font-size 0.3s ease;
 }
-.card:not(:focus) .check {
+.card:not(:hover) .check {
   animation: slideOutCheck 1s forwards;
 }
-.card:not(:focus) .price {
+.card:not(:hover) .price {
   animation: slideOutPrice 1s forwards;
 }
 
